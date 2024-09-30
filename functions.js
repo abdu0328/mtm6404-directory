@@ -12,3 +12,8 @@ function list(clients) {
 function order(clients, field) {
     return clients.sort((a, b) => a[field] > b[field] ? 1 : -1);
 }
+
+// Sums up the balances of all clients
+function total(clients) {
+    return clients.reduce((accumulator, client) => accumulator + client.balance, 0);
+}
