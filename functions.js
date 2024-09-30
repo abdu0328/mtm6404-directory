@@ -17,3 +17,13 @@ function order(clients, field) {
 function total(clients) {
     return clients.reduce((accumulator, client) => accumulator + client.balance, 0);
 }
+
+// Finds and returns the client with the given index
+function info(clientIndex) {
+    return clients.find(client => client.index === clientIndex);
+}
+
+// Filters clients based on the search query
+function search(query) {
+    return clients.filter(client => client.name.toLowerCase().includes(query.toLowerCase()));
+}
